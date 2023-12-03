@@ -46,7 +46,7 @@ export const paymentVerification = async(req,res) => {
         razorpay_signature,
         applicationNo
       })
-      res.redirect(`http://localhost:5173/paymentsuccess?order_id=${razorpay_order_id}&transaction_id=${razorpay_payment_id}&applicationNo=${applicationNo}&amount=${amount}`) 
+      res.redirect(`https://payment-frontend.onrender.com/paymentsuccess?order_id=${razorpay_order_id}&transaction_id=${razorpay_payment_id}&applicationNo=${applicationNo}&amount=${amount}`) 
       
   };
 }
