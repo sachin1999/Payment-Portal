@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PaymentSuccess from "./components/paymentSuccess";
+import PaymentSuccess from "./components/PaymentSuccess";
 import Login from "./components/Login/Login";
-import PreviousTransaction from "./components/previousTransaction";
+import PreviousTransaction from "./components/PreviousTransaction";
 import PaymentPage from "./components/PaymentPage";
 
 function App() {
