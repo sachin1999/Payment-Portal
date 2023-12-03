@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Tahoma, sans-serif;
+}
+
+/* --------------------------- MOBILE VERSION ------------------------------ */
+.page {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.75em;
+}
+
+.header {
+    font-size: 1.5em;
+    padding: 5rem;
+}
+
+.cover {
+    background-color: white;
+    width: 80%;
+    height: 50%;
+    position: relative;
+    border-radius: 1em;
+    box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 1rem;
+}
+
+.alt-login {
+    width: 80%;
+    height: 3em;
+    display: flex;
+    justify-content: space-around;
+}
+
+.alt-login div {
+    width: 47.5%;
+    height: 90%;
+    border-radius: 0.25em;
+    background-color: black;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+
+
+input {
+    width: 70%;
+    background-color: rgb(229, 226, 226);
+    border-radius: 1em;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.8em;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+input:focus {
+    outline-color: rgb(32, 177, 255);
+}
+
+.login-btn {
+    width: 30%;
+    height: 3em;
+    background-color: rgb(32, 177, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    border-radius: 2em;
+    cursor: pointer;
+    /* margin-top: 0.3rem; */
+}
+.login-btn:disabled{
+    background-color: gray;
+    transform: scale(1);
+}
+.login-btn:hover { transform: scale(1.1);}
+
+.hide {
+    position: absolute;
+    transform: scale(0);
+}
+
+
+/* -------------------- TABLET OPTIMIZATION -------------------- */
+@media only screen and (min-device-width: 37em) {
+    .page {
+        font-size: 1em;
+    }
+
+    .cover {
+        width: 60%;
+        height: 70%;
+    }
+}
+
+/* -------------------- DESKTOP OPTIMIZATION -------------------- */
+@media only screen and (min-device-width: 64em) {
+    .page {
+        font-size: 1.25em;
+    }
+
+    .cover {
+        width: 35%;
+        height: 40%;
+    }
+}
