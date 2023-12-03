@@ -21,7 +21,7 @@ const PaymentPage = () => {
     useEffect(() => {
       const fetchDetails = async () => {
       await axios
-        .post("http://localhost:4000/api/details", {
+        .post("https://payment-backend-mw11.onrender.com/api/details", {
           applicationNo
         }).then((res)=> {
           console.log(res.data.userData);
@@ -43,9 +43,9 @@ const PaymentPage = () => {
       const amount = userDetails.amount;
     const checkoutHandler = async () => {
 
-        const { data: { key } } = await axios.get("http://www.localhost:4000/api/getkey")
+        const { data: { key } } = await axios.get("https://payment-backend-mw11.onrender.com/api/getkey")
 
-        const { data: { order } } = await axios.post("http://localhost:4000/api/checkout", {
+        const { data: { order } } = await axios.post("https://payment-backend-mw11.onrender.com/api/checkout", {
            amount,applicationNo
         })
         console.log(order)
@@ -57,7 +57,7 @@ const PaymentPage = () => {
             description: "Test Payment",
             image: dp,
             order_id: order.id,
-            callback_url: `http://localhost:4000/api/paymentverification?applicationNo=${applicationNo}&amount=${amount}`,
+            callback_url: `https://payment-backend-mw11.onrender.com/api/paymentverification?applicationNo=${applicationNo}&amount=${amount}`,
             prefill: {
                 name: "Sachin Gupta",
                 email: "prem34aligarh@gmail.com",
