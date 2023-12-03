@@ -4,6 +4,6 @@ import { checkout, paymentVerification } from "../controllers/paymentController.
 const router = express.Router();
 
 router.route("/checkout").post(checkout);
-router.route("/paymentverification").post(paymentVerification);
+router.route("/paymentVerification").post(paymentVerification);
 
 export default router;

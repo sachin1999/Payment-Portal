@@ -57,7 +57,7 @@ const PaymentPage = () => {
             description: "Test Payment",
             image: dp,
             order_id: order.id,
-            callback_url: `https://payment-backend-mw11.onrender.com/api/paymentverification?applicationNo=${applicationNo}&amount=${amount}`,
+            callback_url: `https://payment-backend-mw11.onrender.com/api/paymentVerification?applicationNo=${applicationNo}&amount=${amount}`,
             prefill: {
                 name: "Sachin Gupta",
                 email: "prem34aligarh@gmail.com",
