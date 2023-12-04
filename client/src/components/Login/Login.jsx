@@ -13,7 +13,7 @@ const Login = () => {
   }
   function handleSubmit(){
     axios
-    .post("https://payment-backend-mw11.onrender.com/api/login", {
+    .post("http://localhost:4000/api/login", {
       applicationNo
     })
     .then((response) => {
@@ -22,7 +22,7 @@ const Login = () => {
         navigate(`/feepayment/?applicationNo=${applicationNo}`);
       } else {
         // user not found
-        console.log("User not found");
+        alert("User not found");
       }
     });
   }
@@ -35,9 +35,9 @@ const Login = () => {
         placeholder='Application No' 
         onChange={(e) => setApplicationNo(e.target.value)}/>
         <ReCAPTCHA
-        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        sitekey="6LfqxSUpAAAAAANF1wMokQYTeLW8QWRKnpT-Zehv"
         onChange={onChange}
-        />,
+        />
         <button className='login-btn' disabled={!verified} onClick={handleSubmit}>Login</button>
       </div>
     </div>
