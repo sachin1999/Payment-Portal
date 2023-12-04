@@ -35,7 +35,7 @@ const Login = () => {
         placeholder='Application No' 
         onChange={(e) => setApplicationNo(e.target.value)}/>
         <ReCAPTCHA
-        sitekey="6LfqxSUpAAAAAANF1wMokQYTeLW8QWRKnpT-Zehv"
+        sitekey="6LdyCCYpAAAAAGqMqBS-62CpREf2yvPYY2cRTY4B"
         onChange={onChange}
         />
         <button className='login-btn' disabled={!verified} onClick={handleSubmit}>Login</button>
