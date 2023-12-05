@@ -17,7 +17,7 @@ const PaymentSuccess = () => {
   const writeData = async() => {
     try{
       const {contract,account} = state;
-      console.log("contract", contract);
+      // console.log("contract", contract);
       await contract.methods.createTransaction(application_no,transaction_id,order_id,amount).send({ from: account})
       .on('transactionHash', (hash) => {
         setTransactionStatus('Transaction sent, waiting for confirmation...');

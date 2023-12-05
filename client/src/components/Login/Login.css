@@ -22,7 +22,7 @@
 .cover {
     background-color: white;
     width: 80%;
-    height: 50%;
+    height: 80%;
     position: relative;
     border-radius: 1em;
     box-shadow: 0 0.188em 1.550em rgb(156, 156, 156);
@@ -31,6 +31,8 @@
     align-items: center;
     justify-content: space-around;
     margin-bottom: 1rem;
+    padding: 1rem;
+    gap:1em;
 }
 
 .alt-login {
@@ -111,6 +113,6 @@ input:focus {
 
     .cover {
         width: 35%;
-        height: 40%;
+        height: 55%;
     }
 }
