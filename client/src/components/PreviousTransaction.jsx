@@ -6,8 +6,9 @@ const PreviousTransaction = () => {
     const location = useLocation();
     const data = location.state;
     const navigate = useNavigate();
-    function handler(){
-      navigate('/');
+    async function handler(){
+        await axios.post('/logout');
+        setRedirect('/');
     }
   return (
     <Box width='80%' mx='auto' mt='1rem'>
