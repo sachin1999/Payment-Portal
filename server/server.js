@@ -22,7 +22,7 @@ export const instance = new Razorpay({
 app.use(cors(
     {
     credentials: true,
-    origin : 'https://paytoblock.netlify.app/',
+    origin : 'https://payment-frontend.onrender.com',
     }
 ));
 app.use(express.json());
