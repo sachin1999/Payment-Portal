@@ -1,4 +1,4 @@
-import  { useState } from 'react'
+import  { useRef, useState } from 'react'
 import "./Login.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
@@ -7,14 +7,18 @@ const Login = () => {
   const [verified, setVerified] = useState(false);
   const navigate = useNavigate();
   const [applicationNo, setApplicationNo] = useState("");
+  const [captchaValue,setCaptchaValue] = useState("");
+  const captchaRef = useRef();
   function onChange(value) {
     console.log("Captcha value:", value);
+    setCaptchaValue(value);
     setVerified(true);
   }
   function handleSubmit(){
+    captchaRef.current.reset();
     axios
-    .post("https://payment-backend-mw11.onrender.com/api/login", {
-      applicationNo
+    .post("http://localhost:4000/api/login", {
+      applicationNo,captchaValue
     })
     .then((response) => {
       if (response.data.success === true) {
@@ -33,10 +37,11 @@ const Login = () => {
         <h1>Enter Application no. to continue</h1>
         <input type='text' id="applicationNo" value={applicationNo} 
         placeholder='Application No' 
-        onChange={(e) => setApplicationNo(e.target.value)}/>
+        onChange={(e) => setApplicationNo(e.target.value)} required/>
         <ReCAPTCHA
-        sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+        sitekey="6LfudFIpAAAAAJe4CeinDs_rCuj9tz3-x7kUSxXw"
         onChange={onChange}
+        ref = {captchaRef}
         />
         <button className='login-btn' disabled={!verified} onClick={handleSubmit}>Login</button>
       </div>
