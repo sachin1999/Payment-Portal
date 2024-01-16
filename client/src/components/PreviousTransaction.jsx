@@ -1,7 +1,7 @@
 import { Box, Button, Card, Table, TableCaption, TableContainer, Tbody, Td, Tfoot, Th, Thead, Tr, VStack } from '@chakra-ui/react';
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import axios from "axios";
 const PreviousTransaction = () => {
     const location = useLocation();
     const data = location.state;
