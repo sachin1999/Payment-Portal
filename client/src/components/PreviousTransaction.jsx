@@ -9,7 +9,7 @@ const PreviousTransaction = () => {
     const navigate = useNavigate();
     async function handler(){
         await axios.post('/logout');
-       <Navigate to='/'/>
+        navigate('/');
     }
   return (
     <Box width='80%' mx='auto' mt='1rem'>
