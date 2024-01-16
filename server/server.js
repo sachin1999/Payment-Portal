@@ -19,7 +19,12 @@ export const instance = new Razorpay({
         key_secret: secret_key,
 });
 
-app.use(cors());
+app.use(cors(
+    {
+    credentials: true,
+    origin : 'http://localhost:5173',
+    }
+));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 // app.use(bodyParser.json()); 
