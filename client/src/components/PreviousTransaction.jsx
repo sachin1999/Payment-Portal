@@ -2,13 +2,14 @@ import { Box, Button, Card, Table, TableCaption, TableContainer, Tbody, Td, Tfoo
 import React from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import axios from "axios";
+import { Navigate } from "react-router";
 const PreviousTransaction = () => {
     const location = useLocation();
     const data = location.state;
     const navigate = useNavigate();
     async function handler(){
         await axios.post('/logout');
-        setRedirect('/');
+       <Navigate to='/'/>
     }
   return (
     <Box width='80%' mx='auto' mt='1rem'>
