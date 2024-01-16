@@ -22,7 +22,7 @@ export const instance = new Razorpay({
 app.use(cors(
     {
     credentials: true,
-    origin : 'http://localhost:5173',
+    origin : 'https://payment-frontend.onrender.com',
     }
 ));
 app.use(express.json());
